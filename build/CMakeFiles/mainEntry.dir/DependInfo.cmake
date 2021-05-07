@@ -1,20 +1,18 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/luca/compito_1/main.cpp" "/home/luca/compito_1/build/CMakeFiles/mainEntry.dir/main.cpp.o"
-  "/home/luca/compito_1/src/fc_scara.cpp" "/home/luca/compito_1/build/CMakeFiles/mainEntry.dir/src/fc_scara.cpp.o"
-  "/home/luca/compito_1/src/meccanismo_scara.cpp" "/home/luca/compito_1/build/CMakeFiles/mainEntry.dir/src/meccanismo_scara.cpp.o"
-  "/home/luca/compito_1/src/pistone.cpp" "/home/luca/compito_1/build/CMakeFiles/mainEntry.dir/src/pistone.cpp.o"
-  "/home/luca/compito_1/src/svg.cpp" "/home/luca/compito_1/build/CMakeFiles/mainEntry.dir/src/svg.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/federicocorso/tpa/compito_1/main.cpp" "CMakeFiles/mainEntry.dir/main.cpp.o" "gcc" "CMakeFiles/mainEntry.dir/main.cpp.o.d"
+  "/Users/federicocorso/tpa/compito_1/src/fc_scara.cpp" "CMakeFiles/mainEntry.dir/src/fc_scara.cpp.o" "gcc" "CMakeFiles/mainEntry.dir/src/fc_scara.cpp.o.d"
+  "/Users/federicocorso/tpa/compito_1/src/meccanismo_scara.cpp" "CMakeFiles/mainEntry.dir/src/meccanismo_scara.cpp.o" "gcc" "CMakeFiles/mainEntry.dir/src/meccanismo_scara.cpp.o.d"
+  "/Users/federicocorso/tpa/compito_1/src/pistone.cpp" "CMakeFiles/mainEntry.dir/src/pistone.cpp.o" "gcc" "CMakeFiles/mainEntry.dir/src/pistone.cpp.o.d"
+  "/Users/federicocorso/tpa/compito_1/src/svg.cpp" "CMakeFiles/mainEntry.dir/src/svg.cpp.o" "gcc" "CMakeFiles/mainEntry.dir/src/svg.cpp.o.d"
   )
 
 # Targets to which this target links.

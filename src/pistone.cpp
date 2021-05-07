@@ -1,8 +1,9 @@
 
 #include "pistone.h"
+/* meglio metterle in piustone.h
 #include <iostream>
 #include <cstring>
-
+*/
 using namespace std;
 
 Pistone* pist_init(unsigned int base, unsigned int x, unsigned int y){

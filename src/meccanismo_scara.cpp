@@ -1,7 +1,8 @@
+#include "meccanismo_scara.h"
+
+//già definite in meccanismo_scara.h
 #include <math.h>
 #include <iostream>
-
-#include "meccanismo_scara.h"
 #include "pistone.h"
 #include "fc_scara.h"
 #include "svg.h"

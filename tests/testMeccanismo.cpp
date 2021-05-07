@@ -1,5 +1,7 @@
 #include "catch2/catch2.hpp"
 #include "meccanismo_scara.h"
+
+//già definite in meccanismo_scara.h
 #include "pistone.h"
 #include "fc_scara.h"
 #include "svg.h"
@@ -49,4 +51,37 @@ TEST_CASE("letteura da file", "[meccanismo]") {
     REQUIRE( ret3->scara->q1 == 90);
 
     meccanismo_del(ret3);    
+}
+SCENARIO("utente assegna valori negativi o nulli in ingresso","[meccanismo]"){
+    GIVEN("un puntatore a struct meccanismo"){
+        Meccanismo* mecch;
+        WHEN("utente assegna valori nulli"){
+            THEN("impone lunghezza manovella nulla"){
+                Meccanismo* ret1 = meccanismo_init(0,60,0,50,200,1);
+                REQUIRE(ret1->pistone != NULL);
+                REQUIRE(ret1->scara == NULL);
+                meccanismo_del(ret1);
+            }
+            THEN("impone base pistone nulla"){
+                Meccanismo* ret1 =meccanismo_init(50,0,0,50,200,1);
+                REQUIRE(ret1 -> pistone == NULL);
+                REQUIRE(ret1 -> scara != NULL);
+                meccanismo_del(ret1);
+            }
+        }
+        WHEN("utente assegna valori negativi"){
+            THEN("impone lunghezza manovella negativa"){
+                Meccanismo* ret1 = meccanismo_init(-20,60,0,50,200,1);
+                REQUIRE(ret1->scara == NULL);
+                REQUIRE(ret1->pistone != NULL);
+                meccanismo_del(ret1);
+            }
+            THEN("impone base pistone negativa"){
+                Meccanismo* ret1 =meccanismo_init(50,-60,0,50,200,1);
+                REQUIRE(ret1-> pistone == NULL);
+                REQUIRE(ret1 -> scara != NULL);
+                meccanismo_del(ret1);
+            }
+        }
+    }
 }
